@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="navigation">
+        <item>Timeline</item>
+        <item>Mentions</item>
+        <item>Direct Messages</item>
+        <item>Favorites</item>
+        <item>Retweets</item>
+        <item>Lists</item>
+        <item>Settings</item>
+    </string-array>
+</resources>

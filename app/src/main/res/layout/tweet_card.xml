@@ -1,0 +1,177 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="2dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:longClickable="true"
+        >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/full_card">
+
+                <ImageView
+                    android:id="@+id/profile_picture"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:elevation="5dp"/>
+
+                <TextView
+                    android:text="@string/screenname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tweet_card_screen_name"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/main_text"
+                    android:layout_marginBottom="1px"
+                    android:layout_toRightOf="@+id/profile_picture"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_below="@id/tweet_card_screen_name"
+                    android:text="Tweet up tp 140 characters. This is a test."
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tweet_card_status"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/main_text"
+                    android:layout_toRightOf="@+id/profile_picture"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColorLink="@color/colorAccent"
+                    android:linksClickable="true"
+
+                    />
+
+                <TextView
+                    android:id="@+id/retweet_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_below="@id/tweet_card_status"
+                    android:text="test user"
+                    android:layout_toRightOf="@id/profile_picture"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:fontFamily="sans-serif-light"/>
+                <TextView
+                    android:id="@+id/retweet_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_below="@id/tweet_card_status"
+                    android:text=" retweeted this"
+                    android:layout_toRightOf="@id/retweet_user"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:fontFamily="sans-serif-light"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:id="@+id/tweet_photo"
+                android:layout_below="@id/full_card"
+                android:visibility="gone"
+                android:scaleType="centerCrop"/>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/actions"
+                android:layout_below="@id/tweet_photo"
+                android:visibility="gone">
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/retweet_icon"
+                    android:src="@drawable/ic_retweet"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="40dp"
+                    android:clickable="true"/>
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/favorite_icon"
+                    android:src="@drawable/ic_favorite_outline"
+                    android:layout_marginRight="40dp"
+                    android:layout_toRightOf="@id/retweet_icon"
+                    android:clickable="true"/>
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/reply_icon"
+                    android:src="@drawable/ic_reply"
+                    android:layout_marginRight="40dp"
+                    android:layout_toRightOf="@id/favorite_icon"
+                    android:clickable="true"/>
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/share_icon"
+                    android:src="@drawable/ic_share"
+                    android:layout_toRightOf="@id/reply_icon"
+                    android:clickable="true"/>
+                <View android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/share_icon"
+                    android:id="@+id/divider_addon"
+                    android:background="@color/background"
+                    />
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/send_reply_icon"
+                    android:src="@drawable/ic_send"
+                    android:layout_below="@id/divider_addon"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom = "5dp"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    />
+                <EditText android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/retweet_icon"
+                    android:id="@+id/reply_edit_text"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toLeftOf="@id/send_reply_icon"
+                    android:backgroundTint="@color/colorAccent"
+                    android:maxLength="140"
+                    />
+
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

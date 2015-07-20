@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#607d8b</color>
+    <color name="white">#ffffff</color>
+    <color name="load">#e0e0e0</color>
+    <color name="main_text">#DF000000</color>
+    <color name="secondary_text">#8a000000</color>
+    <color name="accent">#00bcd4</color>
+    <color name="black">#000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="primary">#607d8b</color>
+    <color name="colorPrimary">#607d8b</color>
+    <color name="colorPrimaryDark">#455a64</color>
+    <color name="colorAccent">#64b5f6</color>
+    <color name="statusBar">#1f000000</color>
+</resources>
